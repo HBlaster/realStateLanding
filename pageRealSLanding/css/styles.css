@@ -92,3 +92,24 @@ body {
     background-image: url('..//img/front3.jpg');
     animation-delay: 12s;
 }
+.hero .hero-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    opacity: 1;
+    width: 30%;
+    height: auto;
+}
+
+.hero .hero-down{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    opacity: 1;
+    width: 5%;
+    height: auto;
+}
