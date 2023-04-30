@@ -1,0 +1,97 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+  /*reseteo css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Generales*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*boton burguer */
+#burger{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#burger .barra {
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+    transition: 400ms all ease-in-out;
+    
+}
+#burger.abierto .barra {
+    background-color: white;
+}
+
+#burger.abierto .barra.superior {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#burger.abierto .barra.media{
+    width: 0;
+}
+
+#burger.abierto .barra.inferior{
+    transform: translateY(-8px) rotateZ(-45deg);   
+}
+
+/*Menu lateral*/
+.menu{
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    position: fixed;
+    top: 0;
+    left: -360px;
+    padding-top: 30px;
+    transition: all 700ms ease-in-out;
+}
+.menu.abierto{
+    left: 0px;
+}
+
+
+.menu nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu nav a {
+    padding: 0.6rem 0;
+    color: rgba(155, 155, 155, 0.911);
+    font-size: 1.1rem;
+    transition: 300ms ease-in-out;
+}
+
+.menu nav a:hover {
+    color: white;
+}
+
+.menu .copyright{
+    color: rgba(155, 155, 155, 0.911);
+    font-size: 0.9rem;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+/*Si se va a hacer un position absolute su padre debe tener un position fixed*/
