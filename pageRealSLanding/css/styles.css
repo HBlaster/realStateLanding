@@ -182,8 +182,141 @@ header.transparente nav a:hover {
     color: white;
 }
 
+/*boton burguer */
+#burger{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+
+#burger .barra {
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+    transition: 400ms all ease-in-out;
+    
+}
+#burger.abierto .barra {
+    background-color: white;
+}
+
+#burger.abierto .barra.superior {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#burger.abierto .barra.media{
+    width: 0;
+}
+
+#burger.abierto .barra.inferior{
+    transform: translateY(-8px) rotateZ(-45deg);   
+}
+
+@media (max-width: 620px) {
+    #burger {
+        display: block;
+    }
+    
+    header {
+        justify-content: flex-end;
+    }
+   header nav{
+        display: none;
+    }
+}
+
+/*Menu lateral*/
+.menu{
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    position: fixed;
+    top: 0;
+    left: -360px;
+    padding-top: 30px;
+    transition: all 700ms ease-in-out;
+}
+.menu.abierto{
+    left: 0px;
+}
+
+
+.menu nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu nav a {
+    padding: 0.6rem 0;
+    color: rgba(155, 155, 155, 0.911);
+    font-size: 1.1rem;
+    transition: 300ms ease-in-out;
+}
+
+.menu nav a:hover {
+    color: white;
+}
+
+.menu .copyright{
+    color: rgba(155, 155, 155, 0.911);
+    font-size: 0.9rem;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+/*Si se va a hacer un position absolute su padre debe tener un position fixed*/
+
 /* Layout */
 .primera{
     margin-top: 100vh;
-    
+}
+
+.fila {
+    display: flex;
+    padding: 2rem 1rem;
+}
+.col-100 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.col-75 {
+    width: 75%;
+    padding: 0.5rem 1rem;
+}
+.col-66 {
+    width: 66.66666%;
+    padding: 0.5rem 1rem;
+}
+.col-50 {
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
+.col-33 {
+    width: 33.333333%;
+    padding: 0.5rem 1rem;
+}
+.col-25 {
+    width: 25%;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 720px) {
+    .fila {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
+    .col-75,
+    .col-66,
+    .col-50,
+    .col-33,
+    .col-25 {
+        width: 100%;
+    }
 }
