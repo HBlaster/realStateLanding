@@ -35,6 +35,10 @@ body {
     color: #67666e;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Hero */
 .hero{
     width: 100%;
@@ -112,4 +116,21 @@ body {
     opacity: 1;
     width: 5%;
     height: auto;
+}
+
+@media (max-width: 720px) {
+    .hero .hero-logo{
+        width: 60%;
+    }
+    .hero .hero-down{
+        width: 15%;
+    }
+}
+@media (max-width: 400px) {
+    .hero .hero-logo{
+        width: 80%;
+    }
+    .hero .hero-down{
+        width: 20%;
+    }
 }
