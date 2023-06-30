@@ -38,6 +38,9 @@ body {
 img {
     max-width: 100%;
 }
+p {
+    margin-bottom: 0.8rem;
+}
 
 /* Hero */
 .hero{
@@ -278,6 +281,12 @@ header.transparente nav a:hover {
     margin-top: 100vh;
 }
 
+#pr{
+    display: block;
+    margin-top: -80px;
+    padding-bottom: 80px ;
+}
+
 .fila {
     display: flex;
     padding: 2rem 1rem;
@@ -319,4 +328,223 @@ header.transparente nav a:hover {
     .col-25 {
         width: 100%;
     }
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Espaciados entre parrafos y margenes */
+
+.m-t {
+    margin-top: 1rem;
+}
+.m-b {
+    margin-bottom: 1rem;
+}
+.m-l {
+    margin-left: 1rem;
+}
+.m-r {
+    margin-right: 1rem;
+}
+.m-t-small {
+    margin-top: 0.5rem;
+}
+.m-b-small {
+    margin-bottom: 0.5rem;
+}
+.m-l-small {
+    margin-left: 0.5rem;
+}
+.m-r-small {
+    margin-right: 0.5rem;
+}
+
+
+/* Paralax */
+.fila.parallax{
+    background-image: url('../img/property5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding:3rem 2rem;
+}
+
+.fila.parallax div{
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 2rem;
+}
+
+.fila.parallax div p {
+    font-size: 1.5rem;
+    color: #a97c50;
+    text-align: center;
+}
+
+/* caja navegacion  */
+.caja-nav img{
+    width: 20%;
+    margin-bottom: 1em;
+}
+
+.caja-nav a {
+    border: 1px solid #a97c50;
+    background-color: white;
+    color: #a97c50;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+}
+.caja-nav a:hover{
+    background-color: #a97c50 ;
+    color: white ;
+}
+
+/* formulario contacto  */
+form.contacto{
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    form.contacto{
+        width: 75%;
+    }
+}
+@media (max-width: 440px) {
+    form.contacto{
+        width: 100%;
+    }
+}
+
+form.contacto .fila{
+    padding: 0.8rem;
+}
+
+input {
+    border: none;
+    border-bottom: 1.5px solid #a97c50;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    width: 100%;
+}
+input:focus {
+    outline: none;
+    border-bottom: 1.5px solid #643e18;
+}
+
+input.usuario {
+    background-image: url(../img/user.svg);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+
+input.email {
+    background-image: url(../img/mail-bronce.svg);
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding-left: 2em;
+}
+
+button {
+    border: none;
+    background-color:#a97c50;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all ease-in-out 400ms;
+}
+button:hover{
+    background-color: #7c4e1f ;
+    
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"] + label::before{
+    content: url(../img/square.svg);
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+input[type="checkbox"]:checked + label::before{
+    content: url(../img/check-square.svg);
+    position: relative;
+    top: 5px;
+    padding-right: 5px;
+}
+
+/* footer  */
+
+footer{
+    background-color: #424242;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.80);
+
+}
+
+footer p:first-child{
+    color: #a97c50;
+    font-weight: bold;
+}
+
+footer img.redes{
+    height: 40px;
+}
+
+footer a {
+    font-size: 0.8rem;
+    color: #a97c50;
+    transition: 400ms ease-in-out all;
+}
+footer a:hover {
+    color: #6d4f31;
+}
+
+footer .copyright {
+    color: rgba(255, 255, 255, 0.479);
+    font-size: .8rem;
+    margin-bottom: 0;
+    text-align: center;
 }

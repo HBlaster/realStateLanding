@@ -9,8 +9,21 @@ $(document).ready(function() {
             $('header').addClass('transparente');
         }
     })
+
+    // Se abre o cierra el menu de hamburguesa (menu lateral)
     $('#burger').click(function(){
         $('#burger').toggleClass('abierto');
         $('.menu').toggleClass('abierto');
     })
+
+    // Transicion para boton hero down
+    $('a').on('click', function() {
+        if(this.hash !==''){
+            let hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800)
+        }
+    })
+
 })
