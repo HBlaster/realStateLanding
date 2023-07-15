@@ -73,6 +73,11 @@
           />
           Entregainmediata
         </p>
+        <p class="flex-end">
+          <button onclick="openModal()">
+            Ver Imagenes
+          </button>
+        </p>
       </div>
 
       <div class="col-50"></div>
@@ -151,5 +156,39 @@
         </p>
       </div>
     </footer>
+
+    <!-- Carusel de imagenes -->
+    <div class="overlay">
+      <div class="carousel">
+        <div class="slide">
+          <img src="img/thumb2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="img/thumb3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="img/thumb4.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="img/thumb5.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="img/thumb6.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="img/thumb8.jpg" alt="">
+        </div>
+        <div class="x-modal">
+          <img onclick="closeModal()" src="img/x.svg" alt="close image">
+        </div>
+        <div onclick="nextSlide()" class="rigth-arrow">
+          <img src="img/right.svg" alt="rigth arrow">
+        </div>
+        <div  onclick="prevSlide()" class="left-arrow">
+          <img src="img/left.svg" alt="right arrow">
+        </div>
+      </div>
+    </div>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
